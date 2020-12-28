@@ -118,22 +118,23 @@ propositions, and corollaries are styled the same way.
 Proofs, examples, and remarks have the initial word in italics,
 while the following text appears in normal font.
 \end{proof}
-For citations of references, we prefer the use of square brackets
-and consecutive numbers. Citations using labels or the author/year
-convention are also acceptable. The following bibliography provides
-a sample reference list with entries for journal
-articles~\cite{ref_article1}, an LNCS chapter~\cite{ref_lncs1}, a
-book~\cite{ref_book1}, proceedings without editors~\cite{ref_proc1},
-and a homepage~\cite{ref_url1}. Multiple citations are grouped
-\cite{ref_article1,ref_lncs1,ref_book1},
-\cite{ref_article1,ref_book1,ref_proc1,ref_url1}.
-%
+
+We can use \verb+citep+ for authors names like~\citep{Petz:2019aa} or
+\verb+citet+ for the traditional numerical
+citation~\citet{Ramsdell:2019aa}.
+
+When submitting papers that must conform to LNCS standards just use
+\verb+cite+ for citations like~\cite{Petz:2019aa} and comment out the
+\verb+natbib+ include above and swap \verb+bibliographystyle+ commands
+below.
+% 
+% 
 % ---- Bibliography ----
 %
 % BibTeX users should specify bibliography style 'splncs04'.
 % References will then be sorted and formatted in the correct style.
 %
-% \bibliographystyle{splncs04}
+%\bibliographystyle{splncs04}
 \bibliographystyle{splncsnat}
 \bibliography{sldg}
 %
