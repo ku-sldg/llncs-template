@@ -6,12 +6,14 @@
    up checking in the built PDF file.
 5. Edit the author section including emails, thanks, running header,
    and add orcid fields.	
-6. Update the `bib` submodule and `sldg.bib` if needed.  Descend into
+6. Update the `bib` submodule and `sldg.bib` if needed by running
+   `git submodule init` and `git submodule update`.
+7. Descend into
    the `bib` directory and pull to get latest entries.  Push back to
    the lab repo if you add or edit entries.
-7. Some includes are commented out as they are not always needed.
+8. Some includes are commented out as they are not always needed.
    Uncomment what you need and add others as needed. 
-8. If you do not want to use `natbib` remove `\usepackage{natbib}`,
+9. If you do not want to use `natbib` remove `\usepackage{natbib}`,
    add `\usepackage{cite}`, and swap `bibliographystyle` commands at
    the end of the document.
    
