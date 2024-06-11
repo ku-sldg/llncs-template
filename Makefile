@@ -6,7 +6,7 @@ BIBTEX = bibtex
 init:
 	@read -p "Enter the paper name: " PAPER_NAME; \
 	sed -i "s/$(BASE_NAME)/$$PAPER_NAME/g" Makefile; \
-	sed -i "s/init:(\s.+)+\s//g" Makefile; \
+	sed -i "/^init:/,/^$$/d" Makefile; \
 	sed -i "s/$(BASE_NAME)/$$PAPER_NAME/g" .gitignore; \
 	mv $(BASE_NAME).tex $$PAPER_NAME.tex; \
 	git submodule update --init; \
