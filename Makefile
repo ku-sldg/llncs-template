@@ -9,7 +9,7 @@ init:
 	sed -i "/^init:/,/^$$/d" Makefile; \
 	sed -i "s/$(BASE_NAME)/$$PAPER_NAME/g" .gitignore; \
 	mv $(BASE_NAME).tex $$PAPER_NAME.tex; \
-	git submodule update --init; \
+	git submodule update --init --remote; \
 	echo "Initialized with $$PAPER_NAME";
 
 all:	$(TEX_SRCS:.tex=.pdf)
